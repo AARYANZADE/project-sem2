@@ -1,0 +1,208 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Authentic Amazon background color */
+body {
+    background-color: #eaeded; 
+}
+
+/* Authentic Amazon Header */
+header {
+    background-color: #131921;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+    letter-spacing: -1px;
+}
+
+.in-text {
+    font-size: 14px;
+    font-weight: normal;
+    color: #ccc;
+    margin-left: 2px;
+}
+
+/* Amazon-style Search Bar */
+.search-bar {
+    display: flex;
+    flex: 1;
+    max-width: 600px;
+    margin: 0 20px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.search-bar select {
+    background-color: #f3f3f3;
+    border: none;
+    padding: 10px;
+    color: #333;
+    cursor: pointer;
+}
+
+.search-bar input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    outline: none;
+}
+
+.search-btn {
+    background-color: #febd69;
+    border: none;
+    padding: 0 15px;
+    cursor: pointer;
+}
+
+.search-btn:hover {
+    background-color: #f3a847;
+}
+
+.cart-icon {
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* --- THE NEW AMAZON BACKGROUND BANNER --- */
+.hero-bg {
+    /* Using a shopping/gift banner from Unsplash */
+    background-image: url('https://images.unsplash.com/photo-1607082349566-187342175e2f?q=80&w=2000&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    height: 350px;
+    width: 100%;
+    /* This gradient makes the bottom fade smoothly into the gray background */
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 100%);
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 100%);
+    position: absolute;
+    top: 55px; /* Sits right below header */
+    left: 0;
+    z-index: 0;
+}
+
+/* Layout Updates */
+main {
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+    max-width: 1300px;
+    margin: 0 auto;
+    /* Pulls the main content up over the fading background */
+    margin-top: 100px; 
+    position: relative;
+    z-index: 1; 
+}
+
+.products {
+    flex: 3;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.product-card {
+    background: white;
+    padding: 20px;
+    border-radius: 4px;
+    text-align: center;
+    /* Slightly stronger shadow to stand out against background */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15); 
+    z-index: 2;
+}
+
+.product-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover; 
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.product-card h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    height: 40px; 
+}
+
+.product-card .price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #B12704; 
+    margin-bottom: 15px;
+}
+
+.add-to-cart-btn {
+    background-color: #ffd814; 
+    border: none;
+    padding: 10px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 14px;
+    transition: background-color 0.2s;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #f7ca00;
+}
+
+.cart-sidebar {
+    flex: 1;
+    background: white;
+    padding: 20px;
+    border-radius: 4px;
+    height: fit-content;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    position: sticky;
+    top: 20px;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+    font-size: 14px;
+}
+
+.empty-msg {
+    color: #555;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.cart-summary {
+    margin-top: 20px;
+}
+
+#checkout-btn {
+    background-color: #ffa41c; 
+    border: none;
+    padding: 12px;
+    width: 100%;
+    border-radius: 8px;
+    margin-top: 15px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+#checkout-btn:hover {
+    background-color: #fa8900;
+}
