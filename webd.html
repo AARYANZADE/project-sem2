@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="webd.css">
+  <body>
+    <header>
+        <div class="logo">amazon<span class="in-text">.in</span></div>
+        
+        <!-- Added a mock search bar to look authentic -->
+        <div class="search-bar">
+            <select><option>All</option></select>
+            <input type="text" placeholder="Search Amazon.in">
+            <button class="search-btn">🔍</button>
+        </div>
+
+        <div class="cart-icon">🛒 Cart (<span id="cart-count">0</span>)</div>
+    </header>
+
+    <!-- The classic Amazon fading background banner -->
+    <div class="hero-bg"></div>
+
+    <main>
+        <section class="products" id="product-list">
+            <!-- JS will inject items here -->
+        </section>
+
+        <aside class="cart-sidebar" id="cart-sidebar">
+            <h2>Shopping Cart</h2>
+            <div id="cart-items">
+                <p class="empty-msg">Your cart is empty.</p>
+            </div>
+            <div class="cart-summary">
+                <h3>Total: <span id="cart-total">₹0.00</span></h3>
+                <button id="checkout-btn" onclick="checkout()">Proceed to Checkout</button>
+            </div>
+        </aside>
+    </main>
+    <script src="webd.js"></script>
+</body>
+</html>
